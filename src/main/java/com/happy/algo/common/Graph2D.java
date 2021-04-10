@@ -74,7 +74,11 @@ public class Graph2D {
         double[][] distanceMatrix = new double[vertexNum][vertexNum];
         for (int i = 0; i < vertexNum; i++) {
             for (int j = 0; j < vertexNum; j++) {
-                distanceMatrix[i][j] = Double.MAX_VALUE;
+                if (i == j) {
+                    distanceMatrix[i][j] = 0;
+                } else {
+                    distanceMatrix[i][j] = Double.MAX_VALUE;
+                }
             }
         }
 
